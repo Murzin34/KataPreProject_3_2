@@ -1,0 +1,6 @@
+web\model\Car.class
+web\service\CarService.class
+web\DAO\CarDaoImpl.class
+web\DAO\CarDao.class
+web\controller\CarController.class
+web\service\CarServiceImpl.class
