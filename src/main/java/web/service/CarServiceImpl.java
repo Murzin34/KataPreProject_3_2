@@ -1,16 +1,24 @@
 package web.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import web.DAO.CarDao;
-import web.DAO.CarDaoImpl;
 import web.model.Car;
+
 import java.util.List;
 
-public class CarServiceImpl implements CarService{
+@Service
+public class CarServiceImpl implements CarService {
+    private final CarDao carDao;
 
-    CarDao carDao = new CarDaoImpl();
-
-    public List<Car> getListCars() {
-        return carDao.getListCars();
+    @Autowired
+    public CarServiceImpl(CarDao carDao) {
+        this.carDao = carDao;
     }
 
+
+    @Override
+    public List<Car> getCars(int i) {
+        return carDao.getCars(i);
+    }
 }
