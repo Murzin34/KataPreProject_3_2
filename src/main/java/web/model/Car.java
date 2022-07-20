@@ -1,18 +1,16 @@
 package web.model;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
+
 @Component
 public class Car {
     private String brand;
     private String model;
     private String color;
 
-    public Car(){
+    public Car() {
 
     }
 
@@ -32,6 +30,18 @@ public class Car {
 
     public String getColor() {
         return color;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override
